@@ -1,0 +1,62 @@
+#main{
+    display: flex;
+    width: 90%;
+    height: 280px;
+    margin: auto;
+    border: 1px solid transparent;
+}
+#details{
+    width: 30%;
+    border: 1px solid transparent;
+    margin: 1%;
+    padding: 1%;
+    font-size: 16px;
+    border-radius: 10%;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
+    font-style: italic;
+}
+#map{
+    width: 63%;
+    margin-left: 1%;
+    border: 1px solid transparent;
+}   
+#mapsearch{
+    width: 35%;
+    margin-left: 7%;
+    margin-bottom: 1%;
+    padding: 1% 2%;
+    font-size: 16px;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+}
+button{
+    margin-left: 1%;
+    padding: 5px;
+    font-size: 28px;
+    border: none;
+    color: white;
+    background: linear-gradient(to right, #2c3e50, #3498db);
+}
+#days{
+    display: flex;
+    width: 90%;
+    height: 240px;
+    margin: auto;
+    border: 1px solid transparent;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;   
+}
+#days>div{
+    width: 20%;
+    height: 88%;
+    
+    border: 1px solid transparent;
+}
+#heading{
+    font-size: 30px;
+    margin-left: 7%;
+    text-decoration: underline;
+    color: rgb(204, 39, 39);
+}
