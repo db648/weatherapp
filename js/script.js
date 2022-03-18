@@ -18,6 +18,10 @@ function weatherMap(){
         document.getElementById("details").innerHTML="";
         document.querySelector("#map").innerHTML="";
 
+        let h3 = document.createElement("h3");
+        h3.innerText = "Weather Details";
+        h3.style.color="aqua";
+
         let temp=document.createElement("p");
         temp.innerText=`Tempareture : ${weather.main.temp}°`;
         let maxtemp=document.createElement("p");
@@ -48,7 +52,7 @@ function weatherMap(){
         let sunset=document.createElement("p");
         sunset.innerText=`Sunset : ${time}`;
 
-        document.getElementById("details").append(temp,maxtemp,mintemp,wind,clounds,sunrise,sunset);
+        document.getElementById("details").append(h3,temp,maxtemp,mintemp,wind,sunrise,sunset);
 
         document.querySelector("#map").innerHTML=`<iframe width="100%" height="100%" 
          src="https://maps.google.com/maps?q=${city}&2880%20Broadway,%20New%20York&t=&z=13&ie=UTF8&iwloc=&output=embed" 
@@ -75,7 +79,7 @@ function weatherMap(){
         document.querySelector("#days").innerHTML="";
         data1.daily.map(function(e){
             let div=document.createElement("div");
-
+            div.setAttribute("id","daysdivjs")
             var day=document.createElement("p");
             var seconds=e.dt;
             var datee=new Date(seconds*1000);
