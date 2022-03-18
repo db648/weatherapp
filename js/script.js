@@ -6,7 +6,7 @@ function weatherMap(){
         try{
             let res=await fetch(url);
             let data=await res.json();
-            showWeather(data);
+            showWeather(data,city);
             // console.log(data);
         }
         catch(err){
@@ -14,12 +14,12 @@ function weatherMap(){
         }
     }
     getWeather();
-    function showWeather(weather){
+    function showWeather(weather,city){
         document.getElementById("details").innerHTML="";
         document.querySelector("#map").innerHTML="";
 
         let h3 = document.createElement("h3");
-        h3.innerText = "Weather Details";
+        h3.innerText = `${city} weather report`;
         h3.style.color="aqua";
 
         let temp=document.createElement("p");
@@ -79,7 +79,7 @@ function weatherMap(){
         document.querySelector("#days").innerHTML="";
         data1.daily.map(function(e){
             let div=document.createElement("div");
-            div.setAttribute("id","daysdivjs")
+
             var day=document.createElement("p");
             var seconds=e.dt;
             var datee=new Date(seconds*1000);
@@ -95,11 +95,11 @@ function weatherMap(){
 
             let mintemp=document.createElement("p");
             mintemp.innerHTML=`${e.temp.min}°<sup>C</sup>`;
-
+            
             div.append(day,img,maxtemp,mintemp);
             document.querySelector("#days").append(div)
+            
         });
     }
     
-
 }
